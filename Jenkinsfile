@@ -42,9 +42,9 @@ pipeline {
    }
 }
 
-    deploy to kubernetes cluster  
+    // deploy to kubernetes cluster
 
-    stage('Kubernetes Deployment of johnapp Web Application') {
+    stage('Kubernetes Deployment of johappy Web Application') {
 	   steps {
 	      withKubeConfig([credentialsId: 'kubelogin']) {
 		  sh('kubectl delete all --all -n devsecops')
@@ -52,6 +52,3 @@ pipeline {
 		}
 	      }
    	}
-	    
-  }
-}
