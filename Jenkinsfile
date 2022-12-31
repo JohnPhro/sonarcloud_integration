@@ -16,7 +16,7 @@ pipeline {
 // 					sh 'mvn snyk:test -fn'
 // 				}
 // 		   }
-    }	
+//     }	
 
 // // building docker image
   stage('Build') { 
@@ -39,7 +39,8 @@ pipeline {
                 }
             }
     	}
+   }
+}
 
-
-  }
+  
 
