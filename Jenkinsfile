@@ -19,7 +19,7 @@ pipeline {
     }	
 
 // // building docker image
-stage('Build') { 
+  stage('Build') { 
             steps { 
                withDockerRegistry([credentialsId: "docker", url: ""]) {
                  script{
@@ -29,7 +29,7 @@ stage('Build') {
             }
     }
 
-stage('Push') {
+  stage('Push') {
             steps {
                 script{
                     docker.withRegistry("https://995076765584.dkr.ecr.us-east-2.amazonaws.com", "ecr:us-east-2:aws-credentials") 
